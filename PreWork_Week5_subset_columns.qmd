@@ -1,0 +1,13 @@
+---
+title: "Subset columns"
+author: "Evelyne Fournier"
+format: 
+    html:
+        embed-resources: true
+---
+
+
+```{python}
+import plotly.express as px
+import pandas as pd
+```

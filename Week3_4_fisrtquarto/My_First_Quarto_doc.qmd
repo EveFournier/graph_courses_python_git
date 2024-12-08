@@ -1,0 +1,12 @@
+---
+title:"My fist Quarto Doc"
+author: "Enoch Ansah-Asiedu"
+format: html
+---
+
+quarto install tinytex
+
+
+quarto --version
+
+

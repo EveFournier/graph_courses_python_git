@@ -1,0 +1,75 @@
+---
+title: "My first quarto doc"
+author: "Evelyne Fournier"
+format: 
+    html:
+        embed-resources: true
+
+---
+
+
+# Level 1 header  
+
+Markdown lets you use *italics* and also **embolden** text
+You can also define bulleted lists
+- First element
+- Second element
+
+You can add link [My link name whatever text](https://thegraphcourses.org)
+
+You can also embed images
+![My image](images/joy.jpg)
+## Level 2 
+
+### Level 3
+
+World
+
+```{python}
+# to parameter if we want to show or not 
+#| echo: false
+#| #eval: false
+2+2
+```
+
+```{python}
+3 * 4
+for num in [1,2,3]: 
+    print(num)
+4 * 4
+```
+
+# Displaying tables
+
+```{python}
+import plotly.express as px
+# enables to do interactif tables
+from itables import show
+tips=px.data.tips()
+show(tips)
+```
+
+# Static table (shown if used in pdf output)
+
+```{python}
+tips
+```
+```{python}
+px.violin(tips,x="tip",y="sex")
+```
+
+# Displaying static plots (if pdf)
+
+
+```{python}
+tips_sex=px.violin(tips,x="tip",y="sex") # works well
+tips_sex
+```
+
+```{python}
+# do not run, bugged for now
+#tips_sex.write_image('outputs/tips_by_sex.png')
+# to show the image in the final documetnt
+#![](outputs/tips_by_sex.png)
+```
+
